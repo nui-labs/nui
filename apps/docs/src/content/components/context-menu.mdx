@@ -1,0 +1,53 @@
+---
+title: "Context Menu"
+description: "Used to provide options specific to an element or area."
+---
+
+<Preview name="context-menu-demo" />
+
+## Usage
+
+```tsx title="Imports"
+import {
+  ContextMenu,
+  ContextMenuCheckboxItem,
+  ContextMenuContent,
+  ContextMenuGroup,
+  ContextMenuItem,
+  ContextMenuLabel,
+  ContextMenuRadioGroup,
+  ContextMenuRadioItem,
+  ContextMenuSeparator,
+  ContextMenuShortcut,
+  ContextMenuSub,
+  ContextMenuSubContent,
+  ContextMenuSubTrigger,
+  ContextMenuTrigger,
+} from "@nui/core/context-menu";
+```
+
+```tsx title="Anatomy"
+<ContextMenu>
+  <ContextMenuTrigger />
+  <ContextMenuContent>
+    <ContextMenuGroup>
+      <ContextMenuGroupLabel />
+      <ContextMenuItem>
+        <ContextMenuItemShortcut />
+      </ContextMenuItem>
+    </ContextMenuGroup>
+    <ContextMenuSeparator />
+    <ContextMenuCheckboxItem />
+    <ContextMenuSeparator />
+    <ContextMenuRadioGroup>
+      <ContextMenuRadioItem />
+    </ContextMenuRadioGroup>
+    <ContextMenuSub>
+      <ContextMenuSubTrigger />
+      <ContextMenuSubContent>
+        <ContextMenuItem />
+      </ContextMenuSubContent>
+    </ContextMenuSub>
+  </ContextMenuContent>
+</ContextMenu>
+```
