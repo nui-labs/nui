@@ -1,0 +1,43 @@
+---
+title: "Sheet"
+description: "A sliding panel for displaying content."
+---
+
+<Preview name="sheet-demo" />
+
+## Usage
+
+```tsx title="Imports"
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@nui/core/sheet";
+```
+
+```tsx title="Anatomy"
+<Sheet>
+  <SheetTrigger />
+  <SheetContent>
+    <SheetClose />
+    <SheetHeader>
+      <SheetTitle />
+      <SheetDescription />
+    </SheetHeader>
+    <SheetFooter>
+      <SheetClose />
+    </SheetFooter>
+  </SheetContent>
+</Sheet>
+```
+
+## Examples
+
+### Sides
+
+<Preview name="sheet-sides" />

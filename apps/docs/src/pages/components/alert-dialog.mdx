@@ -1,0 +1,35 @@
+---
+title: "Alert Dialog"
+description: "A modal dialog for critical messages or confirmation actions."
+---
+
+<Preview name="alert-dialog-demo" />
+
+## Usage
+
+```tsx title="Imports"
+import {
+  AlertDialog,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@nui/core/alert-dialog";
+```
+
+```tsx title="Anatomy"
+<AlertDialog>
+  <AlertDialogTrigger />
+  <AlertDialogContent>
+    <AlertDialogHeader>
+      <AlertDialogTitle />
+      <AlertDialogDescription />
+    </AlertDialogHeader>
+    <AlertDialogFooter>
+      <AlertDialogClose />
+    </AlertDialogFooter>
+  </AlertDialogContent>
+</AlertDialog>
+```

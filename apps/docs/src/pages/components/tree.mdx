@@ -1,0 +1,100 @@
+---
+title: "Tree"
+description: "A hierarchical tree component for displaying nested data structures with expand/collapse functionality."
+---
+
+<Preview name="tree-demo" />
+
+## About
+
+The Tree component provides a flexible way to display hierarchical data with support for icons, badges, navigation, and keyboard interaction. It's perfect for file explorers, navigation menus, or any nested data structure.
+
+## Usage
+
+```tsx title="Imports"
+import { Tree, useTree, type TreeNode } from "@nui/core";
+```
+
+```tsx title="Basic Usage"
+const treeData: TreeNode[] = [
+  {
+    id: "folder",
+    label: "Documents",
+    icon: <FolderIcon className="h-4 w-4" />,
+    expanded: true,
+    children: [
+      {
+        id: "file1",
+        label: "document.pdf",
+        icon: <FileIcon className="h-4 w-4" />,
+        href: "/documents/document.pdf",
+      },
+    ],
+  },
+];
+
+function TreeExample() {
+  const { data, selectedId, handleSelect, handleToggle, handleNavigate } =
+    useTree(treeData);
+
+  return (
+    <Tree
+      data={data}
+      selectedId={selectedId}
+      onSelect={handleSelect}
+      onToggle={handleToggle}
+      onNavigate={handleNavigate}
+    />
+  );
+}
+```
+
+## Examples
+
+### Variants
+
+<Preview name="tree-variants" />
+
+## API Reference
+
+### TreeNode
+
+| Prop     | Type       | Default | Description                      |
+| -------- | ---------- | ------- | -------------------------------- |
+| id       | string     | -       | Unique identifier for the node   |
+| label    | string     | -       | Display text for the node        |
+| icon     | ReactNode  | -       | Icon to display before the label |
+| expanded | boolean    | false   | Whether the node is expanded     |
+| children | TreeNode[] | -       | Child nodes                      |
+| href     | string     | -       | URL for navigation               |
+| badge    | string     | -       | Badge text to display            |
+
+### Tree Props
+
+| Prop       | Type                                   | Default | Description                              |
+| ---------- | -------------------------------------- | ------- | ---------------------------------------- |
+| data       | TreeNode[]                             | -       | Tree data structure                      |
+| selectedId | string                                 | -       | ID of the selected node                  |
+| onSelect   | (id: string, node: TreeNode) => void   | -       | Called when a node is selected           |
+| onToggle   | (id: string, node: TreeNode) => void   | -       | Called when a node is expanded/collapsed |
+| onNavigate | (href: string, node: TreeNode) => void | -       | Called when a node with href is clicked  |
+
+### useTree Hook
+
+```tsx
+const { data, selectedId, handleSelect, handleToggle, handleNavigate } =
+  useTree(initialData, options);
+```
+
+**Options:**
+
+- `onNavigate`: Custom navigation handler
+- `defaultSelected`: Initially selected node ID
+- `defaultExpanded`: Array of initially expanded node IDs
+
+## Accessibility
+
+- Full keyboard navigation support (Arrow keys, Enter, Space)
+- ARIA attributes for screen readers
+- Focus management and visual indicators
+- Semantic HTML structure

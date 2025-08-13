@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@import "@nui/core/theme";
+
+/* Base theme-aware styling */
+html,
+body,
+#root {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}

@@ -1,0 +1,40 @@
+---
+title: "Drawer"
+description: "Displays a panel that slides out from the side of a screen to reveal more content."
+---
+
+<Preview name="drawer-demo" />
+
+## About
+
+The Drawer is built on top of [`vaul-base`](https://vaul-base.vercel.app), which is ported from [`vaul`](https://vaul.emilkowal.ski), originally created by [@emilkowalski\_](https://x.com/emilkowalski_).
+
+## Usage
+
+```tsx title="Imports"
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@nui/core/drawer";
+```
+
+```tsx title="Anatomy"
+<Drawer>
+	<DrawerTrigger>
+	<DrawerContent>
+		<DrawerHeader>
+			<DrawerTitle />
+			<DrawerDescription />
+		</DrawerHeader>
+		<DrawerFooter>
+			<DrawerClose />
+		</DrawerFooter>
+	</DrawerContent>
+</Drawer>
+```

@@ -1,0 +1,39 @@
+---
+title: "Combobox"
+description: "Autocomplete component for selecting items from a list."
+---
+
+<Preview name="combobox-demo" />
+
+Follow installation instructions for the [`Command`](/docs/components/command) and [`Popover`](/docs/components/popover) components.
+
+## Usage
+
+```tsx title="Imports"
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "@nui/core/command";
+import { Popover, PopoverContent, PopoverTrigger } from "@nui/core/popover";
+```
+
+```tsx title="Anatomy"
+<Popover>
+  <PopoverTrigger />
+  <PopoverContent>
+    <Command>
+      <CommandInput />
+      <CommandList>
+        <CommandEmpty />
+        <CommandGroup>
+          <CommandItem />
+        </CommandGroup>
+      </CommandList>
+    </Command>
+  </PopoverContent>
+</Popover>
+```

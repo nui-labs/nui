@@ -1,0 +1,22 @@
+[
+  {
+    "id": "button-demo",
+    "name": "Button Demo",
+    "description": "Button Demo component demo",
+    "category": "component",
+    "type": "component",
+    "updatedAt": "2025-10-25T17:09:39.990Z",
+    "files": [
+      {
+        "name": "button-demo.tsx",
+        "path": "button-demo.tsx",
+        "content": "import { Button } from \"@nui/core\";\n\nexport default function ButtonDemo() {\n  return <Button>Button</Button>;\n}\n",
+        "language": "typescript"
+      }
+    ],
+    "dependencies": [
+      "@nui/core"
+    ],
+    "path": ""
+  }
+]
