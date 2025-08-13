@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@import "@nui/core/theme";
+
+/* Base styling for theme support */
+html {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+#root {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  min-height: 100vh;
+}
+
+/* Unified code block styling */
+pre.shiki {
+  @apply !bg-muted text-xs/5.5 border-0 p-4 rounded-lg overflow-auto mb-4;
+}

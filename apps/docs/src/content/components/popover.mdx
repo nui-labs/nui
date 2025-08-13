@@ -1,0 +1,36 @@
+---
+title: "Popover"
+description: "A popup for displaying content."
+---
+
+<Preview name="popover-demo" />
+
+## Usage
+
+```tsx title="Imports"
+import {
+  Popover,
+  PopoverClose,
+  PopoverContent,
+  PopoverDescription,
+  PopoverFooter,
+  PopoverHeader,
+  PopoverTitle,
+  PopoverTrigger,
+} from "@nui/core/popover";
+```
+
+```tsx title="Anatomy"
+<Popover>
+  <PopoverTrigger />
+  <PopoverContent>
+    <PopoverHeader>
+      <PopoverTitle />
+      <PopoverDescription />
+    </PopoverHeader>
+    <PopoverFooter>
+      <PopoverClose />
+    </PopoverFooter>
+  </PopoverContent>
+</Popover>
+```

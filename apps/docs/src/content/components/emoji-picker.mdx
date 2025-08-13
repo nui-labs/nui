@@ -1,0 +1,42 @@
+---
+title: "Emoji Picker"
+description: "A component that allows users to pick an emoji."
+---
+
+<Preview name="emoji-picker-demo" />
+
+## About
+
+The Emoji Picker is built on top of [`frimousse`](https://frimousse.liveblocks.io/), which is created by [liveblocks](https://liveblocks.io).
+
+## Usage
+
+```tsx title="Imports"
+import {
+  EmojiPicker,
+  EmojiPickerContent,
+  EmojiPickerEmpty,
+  EmojiPickerList,
+  EmojiPickerLoading,
+  EmojiPickerSearch,
+  EmojiPickerSkinToneSelector,
+} from "@nui/core/emoji-picker";
+```
+
+```tsx title="Anatomy"
+<EmojiPicker>
+  <EmojiPickerSearch />
+  <EmojiPickerSkinToneSelector />
+  <EmojiPickerContent>
+    <EmojiPickerLoading />
+    <EmojiPickerEmpty />
+    <EmojiPickerList />
+  </EmojiPickerContent>
+</EmojiPicker>
+```
+
+## Examples
+
+### Popover
+
+<Preview name="emoji-picker-popover" />

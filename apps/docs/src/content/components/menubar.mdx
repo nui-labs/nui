@@ -1,0 +1,51 @@
+---
+title: "Menubar"
+description: "Displays a top-level bar with expandable menus for easy access."
+---
+
+<Preview name="menubar-demo" />
+
+## Usage
+
+```tsx title="Imports"
+import {
+  Menubar,
+  MenubarCheckboxItem,
+  MenubarContent,
+  MenubarGroup,
+  MenubarItem,
+  MenubarLabel,
+  MenubarMenu,
+  MenubarPortal,
+  MenubarRadioGroup,
+  MenubarRadioItem,
+  MenubarSeparator,
+  MenubarShortcut,
+  MenubarSub,
+  MenubarSubContent,
+  MenubarSubTrigger,
+  MenubarTrigger,
+} from "@nui/core/menubar";
+```
+
+```tsx title="Anatomy"
+<Menubar>
+  <MenubarMenu>
+    <MenubarTrigger />
+    <MenubarContent>
+      <MenubarItem>
+        <MenubarShortcut />
+      </MenubarItem>
+      <MenubarSeparator />
+      <MenubarCheckboxItem />
+      <MenubarSub>
+        <MenubarSubTrigger />
+        <MenubarSubContent>{/* ... */}</MenubarSubContent>
+      </MenubarSub>
+      <MenubarRadioGroup>
+        <MenubarRadioItem />
+      </MenubarRadioGroup>
+    </MenubarContent>
+  </MenubarMenu>
+</Menubar>
+```
