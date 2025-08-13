@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45" shape-rendering="geometricPrecision">
+  <path
+    d="M36.778 24.328 9 10v3.36l27.778 14.328v-3.36ZM23.004 31.443 9 24.328v3.36L23.004 35v-3.557ZM36.778 31.443 9 17.115v3.656L36.778 35v-3.557ZM23.004 13.36V10l13.774 7.115v3.656L23.004 13.36Z"
+    fill="currentColor"
+    stroke="currentColor"
+    stroke-width="0.8"
+    stroke-linejoin="round"
+    vector-effect="non-scaling-stroke"
+  />
+</svg>

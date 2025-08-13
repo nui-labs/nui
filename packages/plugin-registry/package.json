@@ -1,0 +1,17 @@
+{
+  "name": "@nui/plugin-registry",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "fast-glob": "^3.3.2"
+  },
+  "peerDependencies": {
+    "vite": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.8.2",
+    "vite": "^7.0.0"
+  }
+}

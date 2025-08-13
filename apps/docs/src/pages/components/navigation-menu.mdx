@@ -1,0 +1,32 @@
+---
+title: "Navigation Menu"
+description: "A menu for navigating between different sections or pages."
+---
+
+<Preview name="navigation-menu-demo" />
+
+## Usage
+
+```tsx title="Imports"
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@nui/core/navigation-menu";
+```
+
+```tsx title="Anatomy"
+<NavigationMenu>
+  <NavigationMenuList>
+    <NavigationMenuItem>
+      <NavigationMenuTrigger>Item</NavigationMenuTrigger>
+      <NavigationMenuContent>
+        <NavigationMenuLink>Link</NavigationMenuLink>
+      </NavigationMenuContent>
+    </NavigationMenuItem>
+  </NavigationMenuList>
+</NavigationMenu>
+```
