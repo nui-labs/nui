@@ -1,0 +1,44 @@
+---
+title: "Breadcrumbs"
+description: "Displays a navigation path for better context."
+---
+
+<Preview name="breadcrumbs-demo" />
+
+## Usage
+
+```tsx title="Imports"
+import {
+  Breadcrumb,
+  BreadcrumbEllipsis,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@nui/core/breadcrumbs";
+```
+
+```tsx title="Anatomy"
+<Breadcrumb>
+  <BreadcrumbList>
+    <BreadcrumbItem>
+      <BreadcrumbLink />
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbEllipsis />
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbPage />
+    </BreadcrumbItem>
+  </BreadcrumbList>
+</Breadcrumb>
+```
+
+## Examples
+
+### Custom Separator
+
+<Preview name="breadcrumbs-custom-separator" />

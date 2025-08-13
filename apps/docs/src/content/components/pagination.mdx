@@ -1,0 +1,55 @@
+---
+title: "Pagination"
+description: "A control for navigating between pages of content."
+---
+
+<Preview name="pagination-demo" />
+
+## Usage
+
+```tsx title="Imports"
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@nui/core/pagination";
+```
+
+```tsx title="Anatomy"
+<Pagination>
+  <PaginationContent>
+    <PaginationItem>
+      <PaginationPrevious href="#" />
+    </PaginationItem>
+    <PaginationItem>
+      <PaginationLink href="#">1</PaginationLink>
+    </PaginationItem>
+    <PaginationItem>
+      <PaginationEllipsis />
+    </PaginationItem>
+    <PaginationItem>
+      <PaginationNext href="#" />
+    </PaginationItem>
+  </PaginationContent>
+</Pagination>
+```
+
+## Pagination Link
+
+By default, the `PaginationLink` component renders an anchor (`<a>`) element.
+
+You can customize it to render a different element by passing a `render` prop.
+
+```tsx title="Using Next.js Link"
+<PaginationLink
+  render={(...props) => (
+    <Link href="#" {...props}>
+      Go to page 1
+    </Link>
+  )}
+/>
+```
