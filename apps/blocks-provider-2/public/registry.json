@@ -1,0 +1,90 @@
+[
+  {
+    "id": "table-01",
+    "name": "Simple Table",
+    "description": "A basic data table with striped rows",
+    "category": "data",
+    "updatedAt": "2025-10-03T15:50:26.076Z",
+    "files": [
+      {
+        "name": "config.ts",
+        "path": "config.ts",
+        "content": "export default {\n  name: \"Simple Table\",\n  description: \"A basic data table with striped rows\",\n  category: \"data\",\n};\n\n",
+        "language": "typescript"
+      },
+      {
+        "name": "index.tsx",
+        "path": "index.tsx",
+        "content": "export default function SimpleTable() {\n  const data = [\n    { id: 1, name: \"John Doe\", email: \"john@example.com\", role: \"Admin\" },\n    { id: 2, name: \"Jane Smith\", email: \"jane@example.com\", role: \"User\" },\n    { id: 3, name: \"Bob Johnson\", email: \"bob@example.com\", role: \"User\" },\n  ];\n\n  return (\n    <table\n      style={{\n        width: \"100%\",\n        borderCollapse: \"collapse\",\n        fontSize: \"0.875rem\",\n      }}\n    >\n      <thead>\n        <tr style={{ backgroundColor: \"#f3f4f6\" }}>\n          <th\n            style={{\n              padding: \"0.75rem\",\n              textAlign: \"left\",\n              fontWeight: \"600\",\n              color: \"#374151\",\n            }}\n          >\n            Name\n          </th>\n          <th\n            style={{\n              padding: \"0.75rem\",\n              textAlign: \"left\",\n              fontWeight: \"600\",\n              color: \"#374151\",\n            }}\n          >\n            Email\n          </th>\n          <th\n            style={{\n              padding: \"0.75rem\",\n              textAlign: \"left\",\n              fontWeight: \"600\",\n              color: \"#374151\",\n            }}\n          >\n            Role\n          </th>\n        </tr>\n      </thead>\n      <tbody>\n        {data.map((row, index) => (\n          <tr\n            key={row.id}\n            style={{\n              backgroundColor: index % 2 === 0 ? \"white\" : \"#f9fafb\",\n            }}\n          >\n            <td style={{ padding: \"0.75rem\", color: \"#111827\" }}>\n              {row.name}\n            </td>\n            <td style={{ padding: \"0.75rem\", color: \"#6b7280\" }}>\n              {row.email}\n            </td>\n            <td style={{ padding: \"0.75rem\", color: \"#6b7280\" }}>\n              {row.role}\n            </td>\n          </tr>\n        ))}\n      </tbody>\n    </table>\n  );\n}\n\n",
+        "language": "typescript"
+      }
+    ],
+    "dependencies": []
+  },
+  {
+    "id": "hero-01",
+    "name": "Hero Section",
+    "description": "A centered hero section with title and CTA",
+    "category": "layout",
+    "updatedAt": "2025-10-03T15:50:26.078Z",
+    "files": [
+      {
+        "name": "config.ts",
+        "path": "config.ts",
+        "content": "export default {\n  name: \"Hero Section\",\n  description: \"A centered hero section with title and CTA\",\n  category: \"layout\",\n};\n\n",
+        "language": "typescript"
+      },
+      {
+        "name": "index.tsx",
+        "path": "index.tsx",
+        "content": "export default function HeroSection() {\n  return (\n    <div\n      style={{\n        textAlign: \"center\",\n        padding: \"4rem 2rem\",\n        backgroundColor: \"#f9fafb\",\n      }}\n    >\n      <h1\n        style={{\n          fontSize: \"3rem\",\n          fontWeight: \"bold\",\n          margin: \"0 0 1rem 0\",\n          color: \"#111827\",\n        }}\n      >\n        Welcome to Our Platform\n      </h1>\n      <p\n        style={{\n          fontSize: \"1.25rem\",\n          color: \"#6b7280\",\n          margin: \"0 0 2rem 0\",\n          maxWidth: \"600px\",\n          marginLeft: \"auto\",\n          marginRight: \"auto\",\n        }}\n      >\n        Build amazing things with our powerful tools and components\n      </p>\n      <button\n        style={{\n          padding: \"0.875rem 2rem\",\n          backgroundColor: \"#3b82f6\",\n          color: \"white\",\n          border: \"none\",\n          borderRadius: \"0.5rem\",\n          fontSize: \"1.125rem\",\n          fontWeight: \"600\",\n          cursor: \"pointer\",\n        }}\n      >\n        Get Started\n      </button>\n    </div>\n  );\n}\n\n",
+        "language": "typescript"
+      }
+    ],
+    "dependencies": []
+  },
+  {
+    "id": "toast-01",
+    "name": "Success Toast",
+    "description": "A success notification toast message",
+    "category": "feedback",
+    "updatedAt": "2025-10-03T15:50:26.078Z",
+    "files": [
+      {
+        "name": "config.ts",
+        "path": "config.ts",
+        "content": "export default {\n  name: \"Success Toast\",\n  description: \"A success notification toast message\",\n  category: \"feedback\",\n};\n\n",
+        "language": "typescript"
+      },
+      {
+        "name": "index.tsx",
+        "path": "index.tsx",
+        "content": "export default function SuccessToast() {\n  return (\n    <div\n      style={{\n        display: \"flex\",\n        alignItems: \"center\",\n        gap: \"0.75rem\",\n        padding: \"1rem 1.25rem\",\n        backgroundColor: \"#10b981\",\n        color: \"white\",\n        borderRadius: \"0.5rem\",\n        boxShadow: \"0 4px 6px rgba(0, 0, 0, 0.1)\",\n        maxWidth: \"400px\",\n      }}\n    >\n      <svg\n        width=\"24\"\n        height=\"24\"\n        viewBox=\"0 0 24 24\"\n        fill=\"none\"\n        stroke=\"currentColor\"\n        strokeWidth=\"2\"\n      >\n        <path d=\"M20 6L9 17l-5-5\" />\n      </svg>\n      <div>\n        <div style={{ fontWeight: \"600\", marginBottom: \"0.25rem\" }}>\n          Success!\n        </div>\n        <div style={{ fontSize: \"0.875rem\", opacity: 0.9 }}>\n          Your changes have been saved.\n        </div>\n      </div>\n    </div>\n  );\n}\n\n",
+        "language": "typescript"
+      }
+    ],
+    "dependencies": []
+  },
+  {
+    "id": "navbar-01",
+    "name": "Simple Navbar",
+    "description": "A basic navigation bar with logo and links",
+    "category": "navigation",
+    "updatedAt": "2025-10-03T15:50:26.079Z",
+    "files": [
+      {
+        "name": "config.ts",
+        "path": "config.ts",
+        "content": "export default {\n  name: \"Simple Navbar\",\n  description: \"A basic navigation bar with logo and links\",\n  category: \"navigation\",\n};\n\n",
+        "language": "typescript"
+      },
+      {
+        "name": "index.tsx",
+        "path": "index.tsx",
+        "content": "export default function SimpleNavbar() {\n  return (\n    <nav\n      style={{\n        display: \"flex\",\n        alignItems: \"center\",\n        justifyContent: \"space-between\",\n        padding: \"1rem 2rem\",\n        backgroundColor: \"#1f2937\",\n        color: \"white\",\n      }}\n    >\n      <div style={{ fontSize: \"1.5rem\", fontWeight: \"bold\" }}>Logo</div>\n      <div style={{ display: \"flex\", gap: \"1.5rem\" }}>\n        <a href=\"#\" style={{ color: \"white\", textDecoration: \"none\" }}>\n          Home\n        </a>\n        <a href=\"#\" style={{ color: \"white\", textDecoration: \"none\" }}>\n          About\n        </a>\n        <a href=\"#\" style={{ color: \"white\", textDecoration: \"none\" }}>\n          Contact\n        </a>\n      </div>\n    </nav>\n  );\n}\n\n",
+        "language": "typescript"
+      }
+    ],
+    "dependencies": []
+  }
+]

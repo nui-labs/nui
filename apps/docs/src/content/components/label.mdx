@@ -1,0 +1,51 @@
+---
+title: "Label"
+description: "A label component for form inputs with accessibility support."
+---
+
+<Preview name="label-demo" />
+
+## About
+
+The Label component provides accessible labels for form inputs, ensuring proper association between labels and form controls for screen readers and other assistive technologies.
+
+## Usage
+
+```tsx title="Imports"
+import { Label } from "@nui/core";
+```
+
+```tsx title="Basic Usage"
+<div className="space-y-2">
+  <Label htmlFor="email">Email</Label>
+  <input
+    id="email"
+    type="email"
+    placeholder="Enter your email"
+    className="w-full px-3 py-2 border rounded-md"
+  />
+</div>
+```
+
+## Examples
+
+### Variants
+
+<Preview name="label-variants" />
+
+## API Reference
+
+### Props
+
+| Prop      | Type      | Default | Description                       |
+| --------- | --------- | ------- | --------------------------------- |
+| htmlFor   | string    | -       | ID of the associated form control |
+| children  | ReactNode | -       | Label content                     |
+| className | string    | -       | Additional CSS classes            |
+
+## Accessibility
+
+- Properly associates labels with form controls using `htmlFor`
+- Supports click-to-focus behavior
+- Compatible with screen readers
+- Follows WAI-ARIA guidelines for form labels

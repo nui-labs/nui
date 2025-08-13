@@ -1,0 +1,30 @@
+{
+  "name": "nui",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "bun --filter ./apps/* dev",
+    "build": "bun --filter ./apps/* build",
+    "lint": "oxlint .",
+    "lint:fix": "oxlint . --fix",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "check": "bun run lint && bun run format",
+    "typecheck": "tsc --noEmit",
+    "fix": "bun run lint:fix && bun run format",
+    "clean": "./scripts/clean.sh"
+  },
+  "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.6.1",
+    "oxlint": "^1.11.1",
+    "prettier": "^3.6.2",
+    "typescript": "^5.8.2"
+  },
+  "engines": {
+    "bun": ">=1.0.0"
+  },
+  "packageManager": "bun@1.1.38"
+}

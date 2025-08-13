@@ -1,0 +1,68 @@
+[
+  {
+    "id": "input-01",
+    "name": "Text Input",
+    "description": "A styled text input field",
+    "category": "forms",
+    "updatedAt": "2025-10-03T15:43:22.466Z",
+    "files": [
+      {
+        "name": "config.ts",
+        "path": "config.ts",
+        "content": "export default {\n  name: \"Text Input\",\n  description: \"A styled text input field\",\n  category: \"forms\",\n};\n",
+        "language": "typescript"
+      },
+      {
+        "name": "index.tsx",
+        "path": "index.tsx",
+        "content": "export default function TextInput() {\n  return (\n    <div style={{ maxWidth: \"300px\" }}>\n      <label\n        style={{\n          display: \"block\",\n          marginBottom: \"0.5rem\",\n          fontSize: \"0.875rem\",\n          fontWeight: \"500\",\n          color: \"#374151\",\n        }}\n      >\n        Email Address\n      </label>\n      <input\n        type=\"email\"\n        placeholder=\"you@example.com\"\n        style={{\n          width: \"100%\",\n          padding: \"0.625rem 0.875rem\",\n          border: \"1px solid #d1d5db\",\n          borderRadius: \"0.5rem\",\n          fontSize: \"0.875rem\",\n          outline: \"none\",\n          transition: \"border-color 0.2s\",\n        }}\n        onFocus={(e) => (e.target.style.borderColor = \"#3b82f6\")}\n        onBlur={(e) => (e.target.style.borderColor = \"#d1d5db\")}\n      />\n    </div>\n  );\n}\n",
+        "language": "typescript"
+      }
+    ],
+    "dependencies": []
+  },
+  {
+    "id": "card-01",
+    "name": "Simple Card",
+    "description": "A basic card component with shadow",
+    "category": "ui",
+    "updatedAt": "2025-10-03T15:43:22.468Z",
+    "files": [
+      {
+        "name": "config.ts",
+        "path": "config.ts",
+        "content": "export default {\n  name: \"Simple Card\",\n  description: \"A basic card component with shadow\",\n  category: \"ui\",\n};\n",
+        "language": "typescript"
+      },
+      {
+        "name": "index.tsx",
+        "path": "index.tsx",
+        "content": "export default function SimpleCard() {\n  return (\n    <div\n      style={{\n        padding: \"1.5rem\",\n        backgroundColor: \"white\",\n        border: \"1px solid #e5e7eb\",\n        borderRadius: \"0.75rem\",\n        boxShadow: \"0 1px 3px rgba(0, 0, 0, 0.1)\",\n        maxWidth: \"300px\",\n      }}\n    >\n      <h3 style={{ margin: \"0 0 0.5rem 0\", fontSize: \"1.25rem\" }}>\n        Card Title\n      </h3>\n      <p style={{ margin: 0, color: \"#6b7280\", fontSize: \"0.875rem\" }}>\n        This is a simple card component with a clean design.\n      </p>\n    </div>\n  );\n}\n",
+        "language": "typescript"
+      }
+    ],
+    "dependencies": []
+  },
+  {
+    "id": "button-01",
+    "name": "Primary Button",
+    "description": "A simple primary button component",
+    "category": "ui",
+    "updatedAt": "2025-10-03T15:43:22.469Z",
+    "files": [
+      {
+        "name": "config.ts",
+        "path": "config.ts",
+        "content": "export default {\n  name: \"Primary Button\",\n  description: \"A simple primary button component\",\n  category: \"ui\",\n};\n",
+        "language": "typescript"
+      },
+      {
+        "name": "index.tsx",
+        "path": "index.tsx",
+        "content": "export default function PrimaryButton() {\n  return (\n    <button\n      style={{\n        padding: \"0.75rem 1.5rem\",\n        backgroundColor: \"#3b82f6\",\n        color: \"white\",\n        border: \"none\",\n        borderRadius: \"0.5rem\",\n        fontSize: \"1rem\",\n        fontWeight: \"500\",\n        cursor: \"pointer\",\n      }}\n      onClick={() => alert(\"Button clicked!\")}\n    >\n      Click Me\n    </button>\n  );\n}\n",
+        "language": "typescript"
+      }
+    ],
+    "dependencies": []
+  }
+]

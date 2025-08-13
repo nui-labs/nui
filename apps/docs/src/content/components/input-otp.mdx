@@ -1,0 +1,30 @@
+---
+title: "Input OTP"
+description: "A component for entering OTP codes."
+---
+
+<Preview name="input-otp-demo" />
+
+## About
+
+The Input OTP is built on top of [`input-otp`](https://input-otp.rodz.dev/), which is created by [@guilherme_rodz](https://x.com/guilherme_rodz).
+
+## Usage
+
+```tsx title="Imports"
+import {
+  InputOTP,
+  InputOTPGroup,
+  InputOTPSeparator,
+  InputOTPSlot,
+} from "@nui/core/input-otp";
+```
+
+```tsx title="Anatomy"
+<InputOTP>
+  <InputOTPGroup>
+    <InputOTPSlot />
+  </InputOTPGroup>
+  <InputOTPSeparator />
+</InputOTP>
+```
