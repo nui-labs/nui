@@ -1,0 +1,47 @@
+---
+title: "Select"
+description: "A dropdown menu for choosing one option from a list.."
+---
+
+<Preview name="select-demo" />
+
+## Usage
+
+```tsx title="Imports"
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@nui/core/select";
+```
+
+```tsx title="Anatomy"
+<Select>
+  <SelectTrigger>
+    <SelectValue />
+  </SelectTrigger>
+  <SelectContent>
+    <SelectGroup>
+      <SelectGroupLabel />
+      <SelectItem />
+    </SelectGroup>
+  </SelectContent>
+</Select>
+```
+
+## Examples
+
+### Custom value
+
+<Preview name="select-with-custom-value" />
+
+### With groups
+
+<Preview name="select-with-groups" />
+
+### Multiple
+
+<Preview name="select-multiple" />
